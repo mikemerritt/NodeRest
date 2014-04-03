@@ -6,12 +6,12 @@ var games = [
   { title: 'The Last of Us', developer: 'Naughty Dog'}
 ];
 
-// Get all games
+// GET all games
 exports.index = function(req, res) {
   res.json(games);
 };
 
-// Get a specific game
+// GET a specific game
 exports.show = function(req, res) {
   // Make sure the requested game exists, return 404 if not.
   if (games.length <= req.params.id || req.params.id < 0) {
@@ -24,7 +24,7 @@ exports.show = function(req, res) {
   res.json(game);
 }
 
-// Post a game
+// POST a game
 exports.post = function(req, res) {
   if (!req.body.hasOwnProperty('title') || !req.body.hasOwnProperty('developer')) {
     res.statusCode = 400;
@@ -40,7 +40,7 @@ exports.post = function(req, res) {
   res.json(true);
 }
 
-// Delete a game
+// DELETE a game
 exports.delete = function(req, res) {
   // Make sure the game exists before trying to delete it.
   if (games.length <= req.params.id || req.params.id < 0) {
