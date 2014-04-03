@@ -2,7 +2,7 @@
 var games = [
   { title: 'Diablo III: Reaper of Souls', developer: 'Blizzard Entertainment'},
   { title: 'Infamous: Second Son', developer: 'Sucker Punch Productions'},
-  { title: 'Darksouls II', developer: 'From Software'},
+  { title: 'Darksouls II', developer: 'FromSoftware'},
   { title: 'The Last of Us', developer: 'Naughty Dog'}
 ];
 
